@@ -1,4 +1,4 @@
-console.log("VARIABLES");
+console.log("%cVARIABLES"," font-size : 45px; color:green; background-color:black;");
 console.log("TO DECLARE VARIABLE WE CAN USE let , var AND const KEYWORD")
 console.log("JAVA SCRIPT IS CASE SENSITIVE LANGUAGE")
 
