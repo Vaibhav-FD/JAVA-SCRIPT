@@ -3,7 +3,6 @@ let a = 9;
     
 let b = "JAVA SCRIPT";
 
-
 let c;
 
 let d = true;
@@ -28,7 +27,24 @@ console.log("---------------------------");
 console.log("");
 
 
+a = 9.12;
+console.log(typeof a);
+
+
+console.log("");
+
+
 b = "9";
 console.log(typeof b);
 b = "91HII"
 console.log(typeof b);
+
+
+console.log("");
+
+
+c = undefined;
+console.log(typeof c);
+
+
+
