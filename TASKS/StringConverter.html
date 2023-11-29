@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Button</title>
+  <style>
+    body{
+      background-color: rgba(0, 0, 0, 0.81);
+      padding-block: 0.9rem;
+    }
+
+    .dabbo{
+      width: 81%;
+      margin-inline: auto;
+      border: 6px ridge turquoise;
+    }
+    input {
+      display: block;
+      margin-block: 2.1rem 6rem;
+      width: 81%;
+      margin-inline: auto;
+      font-size: 3.9rem;
+      border: 9px groove red;
+    }
+
+    button {
+      display: block;
+      margin-block: 2.1rem;
+      font-size: 1.2rem;
+      background-color: rgba(0, 0, 255, 0.39);
+      color: lime;
+      margin-left: 1rem;
+      padding: 0.39rem 0.63rem;
+
+    }
+
+    p{
+      color: whitesmoke;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="dabbo"> 
+
+  <input type="text" id="string" placeholder="STRING  CONVERTER">
+
+  <button type="button" onclick="window.alert(document.getElementById('string').value.toUpperCase());">UPPERCASE</button>
+
+  <button type="button" onclick="window.alert(document.getElementById('string').value.toLowerCase());">LOWERCASE</button>
+
+  <button type="button" onclick="window.alert(document.getElementById('string').value.trim())">TRIM</button>
+
+  <button type="button" onClick="document.getElementById('string').value = '';">CLEAR</button>
+
+  <button type="button" onclick="window.alert(document.getElementById('string').value.replace(/\s+/g, ''));">REMOVE SPACES</button>
+
+  <button type="button" onclick="charCount()">COUNT CHARACTERS</button>
+
+  
+  
+  
+  <button type="button" onclick="">COUNT WORDS   <b style="color: white;">{ BAKI HE 😕 }</b></button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <p>I WAS TRYING TO MAKE CLEAR FUNTION WITH NAME clear() BUT IT WAS NOT WORKING SO I SEARCHED ON GOOGLE THAN I FOUND clear IS KEY WORD console.clear(); SU BE MAGAJ KARAB THAI JYU KETLO TIME BAGDYO MU SALU KAU CODE KOM CHAM NAI KARI RYO AND ACTUALLY ME PASI E FUNCTION J HATAI DIDHU.</p> -->
+
+
+  <script>
+
+    let a = document.getElementById("string").value; 
+
+    function charCount(){
+
+      let b = document.getElementById("string").value.replace(/\s+/g, '');
+      window.alert(b.length);
+
+      //  DOUBT === A BAJU document.getElementById("string").value NI JAGYA E VARIABLE a VAPARU TO KEM KAM NAI KARI RYU EVEN THOUGH ME var KEYWORD B USE KARI JOYO 
+      
+    }
+  </script>
+
+
+
+
+
+</body>
+
+</html>
