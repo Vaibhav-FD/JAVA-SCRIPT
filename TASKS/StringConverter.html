@@ -6,23 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>String Button</title>
   <style>
-    body{
+    body {
       background-color: rgba(0, 0, 0, 0.81);
       padding-block: 0.9rem;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .dabbo{
+    .dabbo {
       width: 81%;
       margin-inline: auto;
       border: 6px ridge turquoise;
     }
-    input {
+
+    .dabbo>div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    input,
+    p {
       display: block;
-      margin-block: 2.1rem 6rem;
+      margin-block: 1rem;
       width: 81%;
       margin-inline: auto;
-      font-size: 3.9rem;
-      border: 9px groove red;
+      font-size: 2.9rem;
+      border: 6px groove red;
+      background-color: white;
+      padding: 0.5rem;
+      height: 6vh;
+      box-shadow: 1px 1px 3px 5px blueviolet;
     }
 
     button {
@@ -32,65 +44,88 @@
       background-color: rgba(0, 0, 255, 0.39);
       color: lime;
       margin-left: 1rem;
-      padding: 0.39rem 0.63rem;
-
+      padding: 1rem 0.63rem;
     }
 
-    p{
-      color: whitesmoke;
+    hr {
+      height: 1vh;
+      background-color: turquoise;
+      border: 6px solid blueviolet;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="dabbo"> 
+  <div class="dabbo">
 
-  <input type="text" id="string" placeholder="STRING  CONVERTER">
+    <input type="text" id="originalstring" placeholder="ORIGINAL STRING">
 
-  <button type="button" onclick="window.alert(document.getElementById('string').value.toUpperCase());">UPPERCASE</button>
+    <hr>
 
-  <button type="button" onclick="window.alert(document.getElementById('string').value.toLowerCase());">LOWERCASE</button>
+    <p id="string">STRING CONVERTION RESULT</p>
 
-  <button type="button" onclick="window.alert(document.getElementById('string').value.trim())">TRIM</button>
+    <div>
 
-  <button type="button" onClick="document.getElementById('string').value = '';">CLEAR</button>
+      <button type="button" onclick="UPPER()">UPPERCASE</button>
 
-  <button type="button" onclick="window.alert(document.getElementById('string').value.replace(/\s+/g, ''));">REMOVE SPACES</button>
+      <button type="button" onclick="LOWER()">LOWERCASE</button>
 
-  <button type="button" onclick="charCount()">COUNT CHARACTERS</button>
+      <button type="button" onclick="TRIM()">TRIM</button>
 
-  
-  
-  
-  <button type="button" onclick="">COUNT WORDS   <b style="color: white;">{ BAKI HE 😕 }</b></button>
+      <button type="button" onClick="CLEAR()">CLEAR</button>
 
-</div>
+      <button type="button" onClick="LENGTH()">LENGTH</button>
 
+      <button type="button" onclick="SPACEREMOVE()">REMOVE SPACES</button> 
 
-
+      <button type="button" onclick="CHARCOUNT()">COUNT CHARACTERS</button> 
 
 
+    </div>
 
 
+  </div>
 
 
-
-
-  <!-- <p>I WAS TRYING TO MAKE CLEAR FUNTION WITH NAME clear() BUT IT WAS NOT WORKING SO I SEARCHED ON GOOGLE THAN I FOUND clear IS KEY WORD console.clear(); SU BE MAGAJ KARAB THAI JYU KETLO TIME BAGDYO MU SALU KAU CODE KOM CHAM NAI KARI RYO AND ACTUALLY ME PASI E FUNCTION J HATAI DIDHU.</p> -->
 
 
   <script>
 
-    let a = document.getElementById("string").value; 
+    function UPPER() {
+      let a = document.getElementById("originalstring").value;
+      document.getElementById("string").innerHTML = document.getElementById("originalstring").value.toUpperCase();
+    }
 
-    function charCount(){
+    function LOWER() {
+      let a = document.getElementById("originalstring").value;
+      document.getElementById("string").innerHTML = document.getElementById("originalstring").value.toLowerCase();
+    }
 
-      let b = document.getElementById("string").value.replace(/\s+/g, '');
-      window.alert(b.length);
+    function TRIM() {
+      let a = document.getElementById("originalstring").value;
+      document.getElementById("string").innerHTML = document.getElementById("originalstring").value.trim();
+    }
 
-      //  DOUBT === A BAJU document.getElementById("string").value NI JAGYA E VARIABLE a VAPARU TO KEM KAM NAI KARI RYU EVEN THOUGH ME var KEYWORD B USE KARI JOYO 
-      
+    function CLEAR() {
+      let a = document.getElementById("originalstring").value;
+      document.getElementById("string").innerHTML = document.getElementById("originalstring", "string").value = "";
+    }
+
+    function LENGTH() {
+      let a = document.getElementById("originalstring").value;
+      document.getElementById("string").innerHTML = document.getElementById("originalstring").value.length;
+    }
+
+    function SPACEREMOVE() {
+      let a = document.getElementById("originalstring").value;
+      document.getElementById("string").innerHTML = document.getElementById("originalstring").value.replace(/\s+/g, '');
+    }
+
+    function CHARCOUNT() {
+
+      document.getElementById("string").innerHTML = document.getElementById("originalstring").value.replace(/\s+/g, '').length;
+
     }
   </script>
 
