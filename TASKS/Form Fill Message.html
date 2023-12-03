@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORM Fill Message</title>
+  <style>
+    * {
+      color-scheme: dark;
+    }
+
+    form>div>div {
+      margin-block: 3rem;
+    }
+
+    form input {
+      font-size: 1.2rem;
+    }
+
+    b {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 360;
+      margin-left: 9%;
+      font-size: 1.2rem;
+      color: lime;
+      word-spacing: 0.3rem;
+      letter-spacing: 0.21rem;
+    }
+
+    label {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    [type="submit"],
+    [type="reset"] {
+      padding: 0.63rem 1.5rem;
+      margin-right: 3%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <form action="">
+
+    <div>
+
+      <div>
+        <label for="">USER NAME :</label> <br>
+        <input type="text" id="uname">
+        <b id="msg1"></b>
+
+      </div>
+
+      <div>
+        <label for="">PASSWORD :</label> <br>
+        <input type="password" id="pass">
+        <b id="msg2"></b>
+
+      </div>
+
+      <div>
+        <label for="">MOBILE NUMBER :</label> <br>
+        <input type="number" onclick="TEST()">
+      </div>
+
+    </div>
+
+    <div>
+      <input type="reset">
+      <input type="submit" onclick="window.confirm('ARE YOU SURE YOU WANT TO SUBMIT ?')" id="submit">
+    </div>
+
+  </form>
+
+
+  <script>
+
+    function TEST() {
+
+      if (document.getElementById("pass").value == 0) {
+        
+        document.getElementById("msg2").innerHTML = "--- PLEASE FILL THIS INPUT FILED ---";
+        // document.getElementById("submit").disabled = true;  
+        // DOUBT
+
+      }
+
+      else {
+
+        document.getElementById("msg2").innerHTML = " ";
+        // document.getElementById("submit").disabled = false;  
+        // DOUBT 
+
+      }
+
+
+
+
+      if (document.getElementById("uname").value == 0){
+        document.getElementById("msg1").innerHTML = "--- PLEASE FILL THIS INPUT FILED ---";
+      }
+      else {
+        document.getElementById("msg1").innerHTML = " ";
+      }
+    
+    }
+
+
+    
+    // if (document.getElementById("pass").value.length == 0) {
+    //   document.getElementById("msg").innerHTML = "PLEASE FILL THIS INPUT FILED.";  
+    // }
+    // else{
+    //   document.getElementById("msg").innerHTML = " ";
+    // }
+    </script>
+
+</body>
+
+</html>
