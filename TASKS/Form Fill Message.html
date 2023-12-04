@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -85,16 +85,14 @@
       if (document.getElementById("pass").value == 0) {
         
         document.getElementById("msg2").innerHTML = "--- PLEASE FILL THIS INPUT FILED ---";
-        // document.getElementById("submit").disabled = true;  
-        // DOUBT
-
+        document.getElementById("submit").disabled = true;  
+  
       }
 
       else {
 
         document.getElementById("msg2").innerHTML = " ";
-        // document.getElementById("submit").disabled = false;  
-        // DOUBT 
+        document.getElementById("submit").disabled = false;  
 
       }
 
@@ -103,9 +101,11 @@
 
       if (document.getElementById("uname").value == 0){
         document.getElementById("msg1").innerHTML = "--- PLEASE FILL THIS INPUT FILED ---";
+        document.getElementById("submit").disabled = true;  
       }
       else {
         document.getElementById("msg1").innerHTML = " ";
+        document.getElementById("submit").disabled = false;  
       }
     
     }
