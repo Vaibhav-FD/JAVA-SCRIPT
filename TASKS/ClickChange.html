@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ImageClickChange</title>
+  <style>
+    img {
+      width: 27%;
+    }
+    button{
+      background-color: black;
+      color: white;
+      padding: 1rem;
+      border: 6px solid lime;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://media.tenor.com/nMwwD7FTuHUAAAAj/clash-royale-prince.gif" alt="" id="image">
+  <button type="button" onclick="CLICK()">CLICK CHANGE</button>
+
+
+  <script>
+
+    function CLICK(){
+      
+      let a = document.getElementById("image").src;
+
+      if (a == "https://media.tenor.com/nMwwD7FTuHUAAAAj/clash-royale-prince.gif") 
+      {
+        document.getElementById("image").src = "https://media.tenor.com/Re6NVozFoJgAAAAi/goblin-clash-royale.gif"; 
+      } 
+
+      else 
+      {
+        document.getElementById("image").src = "https://media.tenor.com/nMwwD7FTuHUAAAAj/clash-royale-prince.gif";
+      }      
+          
+    }
+
+
+  </script>
+  
+</body>
+</html>
