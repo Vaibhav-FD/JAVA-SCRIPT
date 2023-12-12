@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onblur Form Validation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.90);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      width: 21%;
+      border-radius: 1rem;
+      background-image: linear-gradient(rgba(255, 192, 203, 0.72),rgba(12, 151, 12, 0.639), rgba(255, 127, 80, 0.63));
+      padding: 1rem;
+      position: relative;
+      border: 3px solid aqua;
+      transition: box-shadow 603ms ease-in 9ms;
+    }
+    form:hover{
+      box-shadow: 0px 0px 63px aqua;
+    }
+
+    form>label,
+    form input {
+      font-size: 1.2rem;
+    }
+
+    form>label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    form>input {
+      width: 100%;
+      padding-block: 0.21rem;
+    }
+
+    form>div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    form>span {
+      position: absolute;
+      font-size: 1.2rem;
+      left: 6%;
+      top: 32%;
+      color: red;
+      font-weight: 912;
+    }
+
+    #submit,
+    #reset {
+      padding: 0.3rem 1.8rem;
+      background-color: crimson;
+      color: whitesmoke;
+      font-weight: 552;
+    }
+
+    #msg1 {
+      left: 6%;
+      top: 32%;
+
+    }
+
+    #msg2 {
+      left: 6%;
+      top: 59.5%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <form action="">
+
+    <br><br><br>
+
+    <label for="uname">USER NAME :</label>
+    <input type="text" name="uname" placeholder="Enter Your User Name" id="uname" onblur="VALIDATE1()"><span id="msg1"></span>
+
+    <br><br><br><br>
+
+    <label for="pass">PASSWORD :</label>
+    <input type="text" name="pass" placeholder="Enter Your Password" id="pass" onblur="VALIDATE2()"><span id="msg2"></span>
+
+    <br><br><br><br>
+
+
+    <div>
+      <input type="submit" value="SUBMIT" id="submit">
+      <input type="reset" value="RESET" id="reset">
+    </div>
+
+    <br><br><br><br>
+
+
+
+  </form>
+
+
+  <script>
+
+
+    function VALIDATE1() {
+      if (document.getElementById("uname").value == "") {
+        document.getElementById("msg1").innerHTML = "---FILL THIS FIELD OK---";
+      }
+      else {
+        document.getElementById("msg1").innerHTML = "";
+      }
+
+      if (document.getElementById("msg2").innerHTML == "---FILL THIS FIELD OK---" || document.getElementById("msg1").innerHTML == "---FILL THIS FIELD OK---") {
+
+        document.getElementById("submit").style.display = "none";
+      }
+      else {
+        document.getElementById("submit").style.display = "inline";
+      }
+
+    }
+
+
+    function VALIDATE2() {
+
+      if (document.getElementById("pass").value == "") {
+        document.getElementById("msg2").innerHTML = "---FILL THIS FIELD OK---";
+      }
+      else {
+        document.getElementById("msg2").innerHTML = "";
+      }
+
+
+      if (document.getElementById("msg2").innerHTML == "---FILL THIS FIELD OK---" || document.getElementById("msg1").innerHTML == "---FILL THIS FIELD OK---") {
+
+        document.getElementById("submit").style.display = "none";
+      }
+      else {
+        document.getElementById("submit").style.display = "inline";
+      }
+
+    }
+
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
