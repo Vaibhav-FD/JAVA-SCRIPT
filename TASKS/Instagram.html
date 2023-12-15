@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    h1 {
+      font-family: 'Courier New', Courier, monospace;
+      margin-block: 9%;
+      text-align: center;
+      font-size: 2.7rem;
+    }
+
+    .box1 {
+      width: 29%;
+      display: flex;
+      flex-direction: column;
+      padding-inline: 3rem;
+      margin-top: 3%;
+      margin-inline: auto;
+      border: 2px ridge rgba(128, 128, 128, 0.36);
+      position: relative;
+    }
+
+    .box1>input {
+      margin-bottom: 1.8%;
+      font-size: 1rem;
+      padding: 0.69rem;
+      background-color: #fafafa;
+      border: 1px solid gainsboro;
+      border-radius: 3px;
+    }
+
+    #unameplaceholder,
+    #passplaceholder {
+      position: absolute;
+      color: grey;
+      transition: all 270ms;
+
+    }
+
+    .box1 input:focus {
+      border: 1px solid grey;
+      outline: none;
+    }
+
+    #unameplaceholder {
+      top: 30.5%;
+      left: -180%;
+      text-shadow: 850px 1px grey;
+    }
+
+    #passplaceholder {
+      top: 41%;
+      left: -180%;
+      text-shadow: 850px 5px grey;
+    }
+
+    .box1>button {
+      margin-block: 3%;
+      background-color: #4cb5f9;
+      border: none;
+      border-radius: 0.5rem;
+      color: white;
+      padding: 0.6rem;
+      font-weight: 690;
+    }
+
+    .box1 button+div {
+      display: flex;
+      align-items: center;
+      margin-top: 5%;
+    }
+
+    .box1 hr {
+      width: 39%;
+      height: 0.3vh;
+    }
+
+    .box1 hr+span {
+      margin-inline: 8%;
+    }
+
+    #showhide {
+      position: absolute;
+      top: 41%;
+      right: 12.9%;
+      padding-block: 1.1%;
+      background-color: #fafafa;
+      display: none;
+    }
+
+   
+
+    .box1 a {
+      list-style: none;
+      text-decoration: none;
+      color: blue;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .box1>:last-child {
+      color: grey;
+      text-align: center;
+      margin-bottom: 6%;
+    }
+
+    .box1 img {
+      width: 6.9%;
+      margin-right: 3%;
+    }
+
+    .box1>:nth-last-child(2) {
+      text-align: center;
+      margin-block: 6%;
+    }
+
+
+
+    .box2 {
+      width: 29%;
+      margin-top: 1%;
+      margin-inline: auto;
+      border: 2px ridge rgba(128, 128, 128, 0.36);
+      text-align: center;
+      padding: 1.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .box2 span {
+      color: #4cb5f9;
+      font-weight: 560;
+    }
+
+    .box2+p {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-block: 1%;
+    }
+
+
+    .app img {
+      width: 9%;
+      height: 6vh;
+      margin-inline: 0.2rem;
+    }
+
+    .app {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box1">
+    <h1>Instagram</h1>
+    <input type="text" name="uname" id="uname" oninput="INSTA()">
+    <input type="password" name="pass" id="pass" oninput="INSTA()">
+    <span id="showhide" onclick="SHOW()">SHOW</span>
+    <p id="unameplaceholder">Phone Number , Username , Or Email</p>
+    <p id="passplaceholder">Password</p>
+    <button type="button" id="login">Log In</button>
+    <div>
+      <hr><span>OR</span>
+      <hr>
+    </div>
+    <div>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Facebook_logo_36x36.svg/1200px-Facebook_logo_36x36.svg.png"
+        alt="logo"><a href="" target="">Log In With Facebook</a>
+    </div>
+    <a href="">Forgot Password?</a>
+  </div>
+
+
+  <div class="box2">
+    Don't Have An Account ? <span>Sign Up</span>
+  </div>
+  <p>Get The App.</p>
+
+  <div class="app">
+
+    <a href="">
+      <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="googleplaystore">
+    </a>
+    <a href="">
+      <img src=" https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png" alt="applestore">
+    </a>
+
+  </div>
+
+
+
+
+  <script>
+
+
+
+    function INSTA() {
+
+      let a = document.getElementById("uname").value;
+      let b = document.getElementById("pass").value;
+
+
+
+      if (a == "") {
+        document.getElementById("uname").style.padding = "0.69rem";
+        document.getElementById("unameplaceholder").style.textShadow = "850px 1px grey";
+        document.getElementById("unameplaceholder").style.fontSize = "1rem";
+      }
+
+      else {
+
+        document.getElementById("unameplaceholder").style.textShadow = "850px -9px grey";
+        document.getElementById("uname").style.paddingTop = "1.1rem";
+        document.getElementById("uname").style.paddingBottom = "0.3rem";
+        document.getElementById("unameplaceholder").style.fontSize = "0.8rem";
+      }
+
+
+
+      if (b == "") {
+        document.getElementById("pass").style.padding = "0.69rem";
+        document.getElementById("passplaceholder").style.textShadow = "850px 5px grey";
+        document.getElementById("passplaceholder").style.fontSize = "1rem";
+      }
+      else {
+        document.getElementById("passplaceholder").style.textShadow = "850px -3px grey";
+        document.getElementById("pass").style.paddingTop = "1.1rem";
+        document.getElementById("pass").style.paddingBottom = "0.3rem";
+        document.getElementById("passplaceholder").style.fontSize = "0.8rem";
+      }
+
+
+      if (a != "" && b.length > 7) {
+        document.getElementById("login").style.backgroundColor = "#0095f6";
+      }
+      else {
+        document.getElementById("login").style.backgroundColor = "#4cb5f9";
+      }
+
+
+      if ( b == "") {
+        document.getElementById("showhide").style.display = "none";
+      } else {
+        document.getElementById("showhide").style.display = "block";
+      }
+
+      
+    }
+
+
+    function SHOW(){
+
+      if (document.getElementById("showhide").innerHTML == "SHOW") {
+        document.getElementById("showhide").innerHTML = "HIDE";
+        document.getElementById("pass").type = "text";
+      } 
+      else {
+        document.getElementById("showhide").innerHTML = "SHOW";
+        document.getElementById("pass").type = "password";
+      }
+      
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
