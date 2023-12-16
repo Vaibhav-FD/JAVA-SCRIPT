@@ -10,8 +10,8 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-
     }
+
 
     h1 {
       font-family: 'Courier New', Courier, monospace;
@@ -45,7 +45,6 @@
       position: absolute;
       color: grey;
       transition: all 270ms;
-
     }
 
     .box1 input:focus {
@@ -55,14 +54,14 @@
 
     #unameplaceholder {
       top: 30.5%;
-      left: -180%;
-      text-shadow: 850px 1px grey;
+      left: 12.99%;
+      pointer-events: none;
     }
 
     #passplaceholder {
-      top: 41%;
-      left: -180%;
-      text-shadow: 850px 5px grey;
+      top: 42%;
+      left: 12.99%;
+      pointer-events: none;
     }
 
     .box1>button {
@@ -212,38 +211,38 @@
       let a = document.getElementById("uname").value;
       let b = document.getElementById("pass").value;
 
-
+      
 
       if (a == "") {
+        document.getElementById("unameplaceholder").style.top = "30.5%";
         document.getElementById("uname").style.padding = "0.69rem";
-        document.getElementById("unameplaceholder").style.textShadow = "850px 1px grey";
         document.getElementById("unameplaceholder").style.fontSize = "1rem";
       }
 
       else {
 
-        document.getElementById("unameplaceholder").style.textShadow = "850px -9px grey";
         document.getElementById("uname").style.paddingTop = "1.1rem";
         document.getElementById("uname").style.paddingBottom = "0.3rem";
+        document.getElementById("unameplaceholder").style.top = "28.8%";
         document.getElementById("unameplaceholder").style.fontSize = "0.8rem";
       }
 
 
 
       if (b == "") {
+        document.getElementById("passplaceholder").style.top = "42%";
         document.getElementById("pass").style.padding = "0.69rem";
-        document.getElementById("passplaceholder").style.textShadow = "850px 5px grey";
         document.getElementById("passplaceholder").style.fontSize = "1rem";
       }
       else {
-        document.getElementById("passplaceholder").style.textShadow = "850px -3px grey";
+        document.getElementById("passplaceholder").style.top = "39.9%";
         document.getElementById("pass").style.paddingTop = "1.1rem";
         document.getElementById("pass").style.paddingBottom = "0.3rem";
         document.getElementById("passplaceholder").style.fontSize = "0.8rem";
       }
 
 
-      if (a != "" && b.length > 7) {
+      if (a != "" && b.length > 5) {
         document.getElementById("login").style.backgroundColor = "#0095f6";
       }
       else {
