@@ -12,6 +12,12 @@
       box-sizing: border-box;
     }
 
+    input[type="password"]::-ms-reveal,
+    input[type="password"]::-ms-clear {
+      display: none;
+    }
+
+
 
     h1 {
       font-family: 'Courier New', Courier, monospace;
@@ -98,7 +104,7 @@
       display: none;
     }
 
-   
+
 
     .box1 a {
       list-style: none;
@@ -211,7 +217,7 @@
       let a = document.getElementById("uname").value;
       let b = document.getElementById("pass").value;
 
-      
+
 
       if (a == "") {
         document.getElementById("unameplaceholder").style.top = "30.5%";
@@ -250,27 +256,27 @@
       }
 
 
-      if ( b == "") {
+      if (b == "") {
         document.getElementById("showhide").style.display = "none";
       } else {
         document.getElementById("showhide").style.display = "block";
       }
 
-      
+
     }
 
 
-    function SHOW(){
+    function SHOW() {
 
       if (document.getElementById("showhide").innerHTML == "SHOW") {
         document.getElementById("showhide").innerHTML = "HIDE";
         document.getElementById("pass").type = "text";
-      } 
+      }
       else {
         document.getElementById("showhide").innerHTML = "SHOW";
         document.getElementById("pass").type = "password";
       }
-      
+
     }
 
 
