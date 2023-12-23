@@ -11,17 +11,20 @@
       padding: 0;
       box-sizing: border-box;
       color-scheme: dark;
+
     }
+    
 
     #colorbox {
       margin-block: 3%;
-      width: 36%;
+      width: 27%;
+      height: 39vh;
       margin-inline: auto;
       border: 21px groove rgba(245, 245, 245, 0.81);
-      padding: 8.1rem;
       box-shadow: 0px 0px 90px rgba(245, 245, 245, 0.81);
       background-color: rgba(0, 0, 0, 0.12);
       border-radius: 2.1rem;
+      transition: box-shadow 390ms linear;
     }
 
     button {
@@ -31,13 +34,6 @@
       font-size: 1.1rem;
       margin-block: 6%;
     }
-
-    /* #msg {
-      width: 54%;
-      margin-inline: auto;
-      padding: 2.1rem;
-      border: 3px solid crimson;
-    } */
   </style>
 </head>
 
@@ -46,68 +42,57 @@
   <div id="colorbox"></div>
 
   <button type="button" id="stbtn" onclick="COLOR()">START</button>
-  
 
-  <!-- <div id="msg"></div> -->
+  <h1>STOP IS NOT WORKING</h1>
+
+
 
   <script>
 
+    let clArr = ["RED", "GREEN", "BLUE", "HOTPINK","GREY","AQUA","YELLOW","CHOCOLATE","BURLYWOOD"];
+    
+    let timer = 0;
+    
+
+
     function COLOR() {
-
-      let clArr = ["RED", "GREEN", "BLUE", "HOTPINK","GREY","PURPLE","YELLOW","CHOCOLATE","BURLYWOOD"];
-
-      let timer = 0;
-
-
-        
+      
       if (document.getElementById("stbtn").innerHTML == "START") {
         
+    
+        document.getElementById("stbtn").innerHTML = "STOP";
+
+        
+        for (let i = 0; i < clArr.length; i++) {
           
-            document.getElementById("stbtn").innerHTML = "STOP";
+          if (document.getElementById("stbtn").innerHTML == "START") {
+            break;
+          }
+
+          setTimeout(() => {
             
-            for (let i = 0; i < clArr.length; i++) {
-
-              
-              if ( document.getElementById("stbtn").innerHTML == "START" ) {
-                break;
-              }
-
-              setInterval(() => {
-                
-                setTimeout(() => {
-                  console.log(i + " = " + clArr[i]);
-                  document.getElementById("colorbox").style.backgroundColor = clArr[i];
-                  
-                  
-                }, timer = timer + 900);
-                
-              }, 210);
-              
+            console.log(i + " = " + clArr[i]);
+            document.getElementById("colorbox").style.backgroundColor = clArr[i];
+            document.getElementById("colorbox").style.boxShadow = "0px 0px 90px " + clArr[i];
+                 
+          }, timer = timer + 900);
+         
         }
         
-      }
-      
-      
-      else {
-            document.getElementById("stbtn").innerHTML = "START";
-            
-          }
+      }else {
+            document.getElementById("stbtn").innerHTML = "START"; 
+           }
           
     }
-        
-        
-        
-        // setInterval(() => {
-          //   console.log(i+" = "+clArr[i]);
-          //   document.getElementById("colorbox").style.backgroundColor = clArr[i];
-          // }, timer = timer + 900);    
+
+// setInterval(() => {
+//   console.log(i+" = "+clArr[i]);
+//   document.getElementById("colorbox").style.backgroundColor = clArr[i];
+// }, timer = timer + 900);    
           
-          // ALTOUGH THIS IS WORKING BUT AFTER ONE ROUND THE COLORS ARE NOT EXECUTING INDEX BY INDEX IT IS EXECUTING RANDOMLY.
-
-
-   
+// ALTOUGH THIS IS WORKING BUT AFTER ONE ROUND THE COLORS ARE NOT EXECUTING INDEX BY INDEX IT IS EXECUTING RANDOMLY. 
         
-  </script>
+</script>
 </body>
 
 </html>
