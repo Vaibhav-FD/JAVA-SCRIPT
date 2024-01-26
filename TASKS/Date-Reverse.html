@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Reverse</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color-scheme: dark;
+      margin: 1rem;
+      font-size: 1.5rem;
+    } 
+    input{
+      display: block;
+      padding: 0.3rem;
+    }
+    p{
+      word-spacing: 1em;
+    }
+    button{
+      padding: 0.39rem;
+    }
+   
+  </style>
+</head>
+<body>
+
+  <input type="date" id="date" value="2001-12-09">      
+
+  <button type="button" onclick="DATE()" >REVERSE DATE</button>
+
+  <p>YYYY - MM - DD</p>
+
+  <p id="revdate"></p>
+
+  <script>
+    function DATE(){
+
+      document.getElementById("revdate").innerText = document.getElementById("date").value;
+
+      console.log(document.getElementById("date").value);
+
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pattern Number</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+
+    for (let n = 1; n <= 5; n++) {
+
+      for (let i = 1; i <= 2; i++) {
+
+        document.write(n + "1");
+
+        if (i == 2) {
+          document.write(n);
+        }
+
+      }
+      document.write("<br>");
+
+    }
+
+
+
+    document.write("<hr>");
+    document.write("<hr>");
+    document.write("<hr>");
+    document.write("<hr>");
+
+
+
+
+
+   
+
+
+    for (let s = 1; s <=5; s++) {
+      document.write(s + " " + "1"+ " " + s*s  + "    " + "1" + " " + s*s*s + "<br>" );
+
+      // document.write(s + " " + "1"+ " " + Math.pow(s,2)  + "    " + "1" + " " + Math.pow(s,3) + "<br>" );  
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>
