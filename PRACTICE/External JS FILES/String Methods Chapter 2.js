@@ -12,7 +12,7 @@ console.log("%c===STRING METHODS CHAPTER 2===", "color : aqua ; font-size: 1.2re
     console.log("%cTHE indexOf('string',start index position) METHOD IS USED TO GET INDEX VALUE", "color:khaki;");
 
     console.log('testString.indexOf("Type")  =  ', testString.indexOf("Type"));
-    console.log('testString.indexOf("Type")  =  ', testString.indexOf("type"));
+    console.log('testString.indexOf("type")  =  ', testString.indexOf("type"));
     console.log('testString.indexOf("ript")  =  ', testString.indexOf("ript"));
     console.log('testString.indexOf("a")  =  ', testString.indexOf("a"));
     console.log('testString.indexOf("a",12)  =  ', testString.indexOf("a", 12));
@@ -20,7 +20,6 @@ console.log("%c===STRING METHODS CHAPTER 2===", "color : aqua ; font-size: 1.2re
     console.log('testString.indexOf(" ")  =  ', testString.indexOf(" "), "\t\t***WHITE SPACE.***");
     console.log('testString.indexOf("")  =  ', testString.indexOf(""));
     console.log('testString.indexOf()  =  ', testString.indexOf());
-    console.log('testString.indexOf()  =  ', testString.search("Java"));
 
 
     console.log("%cWELL THERE IS ACTUALLY search() METHOD WHICH WORKS SAME LIKE indexOf() BUT indexOf() IS MORE POWERFUL BECUASE IT CAN TAKE 2 PARAMETERS AND search() CAN ONLY TAKE ONE PARAMETER SO USE indexOf() OK.", "color:red;");

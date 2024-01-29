@@ -46,5 +46,8 @@ console.log("");
 c = undefined;
 console.log(typeof c);
 
+console.log("");
 
 
+e = 912n;
+console.log(typeof e);

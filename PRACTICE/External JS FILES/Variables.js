@@ -12,13 +12,13 @@ console.log(a);
 
 var a = 12;          //VARIABLE RE - DECLARATION
 console.log(a);
-
+ 
 var b;
-b = 21;             //VARIABLE ASSIGNMENT 
+b = 21;             //VARIABLE ASSIGN 
 console.log(b);
 
 b = 27;
-console.log(b);       //VARIABLE RE - ASSIGNMENT
+console.log(b);       //VARIABLE RE - ASSIG
 
 
 console.log("++++++++++++++++++++++++++++++++++");
@@ -106,18 +106,18 @@ console.log("++++++++++++++++++++++++++++++++++");
 console.log("\n\n\nNOTE   -   DO NOT USE var BECUASE IT HAS GLOBAL SCOPE AND IT CAN BE RE DECLARE AS WELL AS RE ASIGN MAY BE IT CAN GENERATE SOME ERRORS AND BUGS SO ALWAYS USE let OR const.");
 
 
-console.log("%c\n\n\nNOTE   -   THERE ARE SOME RULE TO DECLARE VARIBALE IN JAVA SCRIPT   \n\n\n<1> VARIBLE NAME MUST STARTS WITH EITHER LETTERS(a-z,A-Z), _ OR $.  \n<2> VARIABLE NAME CAN CONTAIN LETTERS (a-z,A-Z) , _ ,$ AND NUMBERS(0-9). \n<3> JS IS CASE SENSITVE LANGUAGE SO variable a AND varibale A ARE DIFFERNET.  \n<4> YOU CAN NOT GIVE VARIBLE NAME WHICH IS ALREADY A KEY WORD OR RESERVED WORD IN JS. FOR EX - let var = 9; BUT let VAR = 12; IS OK","color: lime ;");
+console.log("%c\n\n\nNOTE   -   THERE ARE SOME RULE TO DECLARE VARIBALE IN JAVA SCRIPT   \n\n\n<1> VARIBLE NAME MUST STARTS WITH EITHER LETTERS(a-z,A-Z), _ OR $.  \n<2> VARIABLE NAME CAN CONTAIN LETTERS (a-z,A-Z) , _ ,$ AND NUMBERS(0-9).\n<3> VARIABLE NAME SHOULD NOT HAVE WHITE SPACE. \n<4> JS IS CASE SENSITVE LANGUAGE SO variable a AND varibale A ARE DIFFERNET.  \n<5> YOU CAN NOT GIVE VARIBLE NAME WHICH IS ALREADY A KEY WORD OR RESERVED WORD IN JS. FOR EX - let var = 9; BUT let VAR = 12; IS OK","color: lime ;");
 
 
 // var x = 9;       let x = 12;
 // let x = 12;      var x = 9;
 // console.log(x);
 
-// THIS BOTH ARE NOT ALLOWED IT WILL GIVE AN ERROR SAME FOR CONST
+// THIS BOTH ARE NOT ALLOWED IT WILL GIVE AN ERROR SAME FOR const
 
 // var y = 27;       let y = 21;
 // let y = 21;      var y = 27;
-// console.log(x);
+// console.log(y);
 // IT WILL GIVE AN ERROR
 
 
