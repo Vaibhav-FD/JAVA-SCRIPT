@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Drop Down</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 1.29rem;
+      word-spacing: 0.39rem;
+      letter-spacing: 0.09rem;
+      font-family: 'Audiowide', cursive;
+    }
+
+    body {
+      background-color: #36454f;
+      color: white;
+    }
+
+    .DROP-DOWN {
+      margin: 2.1%;
+      width: 18%;
+    }
+
+    span{
+      color: red;
+    }
+    #FD {
+      border: 3px solid limegreen;
+      padding: 0.69rem 0.21rem;
+    }
+
+    #TECH {
+      margin-top: 3%;
+      border: 3px solid deeppink;
+      display: none;
+      position: relative;
+    }
+
+    #TECH>p ,#JSDROPDOWN>p,#LIB>p,#FRAM>p{
+      padding: 0.69rem;
+    }
+
+    #JSDROPDOWN{
+      width: 21.9vw;
+      border: 3px solid aqua;
+      position: absolute;
+      left: 102.9%;
+      top: 69%;
+      display: none;
+    }
+
+
+    #LIB{
+      width: 18vw;
+      position: absolute;
+      top: 0;
+      left: 102.9%;
+      border: 3px solid blueviolet;
+      display: none;
+    }
+
+    #FRAM{
+      width: 21vw;
+      position: absolute;
+      top: 57%;
+      left: 102.9%;
+      border: 3px solid orange;
+      display: none;
+    }
+    
+    #TECH>:nth-child(2){
+      border-block: 3px solid black;
+    }
+    #JSDROPDOWN>:first-child , #LIB>:first-child,#FRAM :not(:last-child){
+      border-bottom: 3px solid black;
+    }
+
+    
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="DROP-DOWN">
+
+    <p id="FD" onclick="DROP_DOWN_1()">FRONT-END <span> 🢃</span></p>
+
+    <div id="TECH">
+
+      <p>HTML</p>
+      <p>CSS</p>
+
+      <p  onclick="DROP_DOWN_2()">JS <span> ➤</span></p>
+      <div id="JSDROPDOWN">
+
+
+        <p onclick="DROP_DOWN_3()">LIBRARY <span> ➤</span></p>
+        <div id="LIB">
+          <p>REACT</p>
+          <p>JQUERY</p>
+        </div>
+
+
+        <p onclick="DROP_DOWN_4()">FRAMEWORKS <span> ➤</span></p>
+        <div id="FRAM">
+          <p>SVELTE</p>
+          <p>VUE</p>
+          <p>SOLID</p>
+          <p>ANGULAR</p>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+  <script>
+    function DROP_DOWN_1() {
+      document.getElementById("TECH").style.display = "block";
+    }
+
+
+    function DROP_DOWN_2() {
+      document.getElementById("JSDROPDOWN").style.display = "block";
+    }
+
+    function DROP_DOWN_3() {
+      document.getElementById("FRAM").style.display = "none";
+      document.getElementById("LIB").style.display = "block";
+    }
+
+    function DROP_DOWN_4() {
+      document.getElementById("LIB").style.display = "none";
+      document.getElementById("FRAM").style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>
