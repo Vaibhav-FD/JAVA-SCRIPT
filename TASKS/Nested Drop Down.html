@@ -27,12 +27,14 @@
       width: 18%;
     }
 
-    span{
+    span {
       color: red;
     }
+
     #FD {
       border: 3px solid limegreen;
       padding: 0.69rem 0.21rem;
+      cursor: pointer;
     }
 
     #TECH {
@@ -42,11 +44,14 @@
       position: relative;
     }
 
-    #TECH>p ,#JSDROPDOWN>p,#LIB>p,#FRAM>p{
+    #TECH>p,
+    #JSDROPDOWN>p,
+    #LIB>p,
+    #FRAM>p {
       padding: 0.69rem;
     }
 
-    #JSDROPDOWN{
+    #JSDROPDOWN {
       width: 21.9vw;
       border: 3px solid aqua;
       position: absolute;
@@ -56,7 +61,7 @@
     }
 
 
-    #LIB{
+    #LIB {
       width: 18vw;
       position: absolute;
       top: 0;
@@ -65,7 +70,7 @@
       display: none;
     }
 
-    #FRAM{
+    #FRAM {
       width: 21vw;
       position: absolute;
       top: 57%;
@@ -73,16 +78,16 @@
       border: 3px solid orange;
       display: none;
     }
-    
-    #TECH>:nth-child(2){
+
+    #TECH>:nth-child(2) {
       border-block: 3px solid black;
     }
-    #JSDROPDOWN>:first-child , #LIB>:first-child,#FRAM :not(:last-child){
+
+    #JSDROPDOWN>:first-child,
+    #LIB>:first-child,
+    #FRAM :not(:last-child) {
       border-bottom: 3px solid black;
     }
-
-    
-    
   </style>
 </head>
 
@@ -97,7 +102,7 @@
       <p>HTML</p>
       <p>CSS</p>
 
-      <p  onclick="DROP_DOWN_2()">JS <span> ➤</span></p>
+      <p onclick="DROP_DOWN_2()">JS <span> ➤</span></p>
       <div id="JSDROPDOWN">
 
 
@@ -128,22 +133,46 @@
 
   <script>
     function DROP_DOWN_1() {
-      document.getElementById("TECH").style.display = "block";
+
+      if (document.getElementById("TECH").style.display == "block") {
+        document.getElementById("TECH").style.display = "none";
+      } else {
+        document.getElementById("TECH").style.display = "block";
+      }
+
     }
 
 
     function DROP_DOWN_2() {
-      document.getElementById("JSDROPDOWN").style.display = "block";
+
+      if (document.getElementById("JSDROPDOWN").style.display == "block") {
+        document.getElementById("JSDROPDOWN").style.display = "none";
+      } else {
+        document.getElementById("JSDROPDOWN").style.display = "block";
+      }
+
     }
 
     function DROP_DOWN_3() {
+
       document.getElementById("FRAM").style.display = "none";
-      document.getElementById("LIB").style.display = "block";
+
+      if (document.getElementById("LIB").style.display == "block") {
+        document.getElementById("LIB").style.display = "none";
+      } else {
+        document.getElementById("LIB").style.display = "block";
+      }
     }
 
     function DROP_DOWN_4() {
+      
       document.getElementById("LIB").style.display = "none";
-      document.getElementById("FRAM").style.display = "block";
+
+      if (document.getElementById("FRAM").style.display == "block") {
+        document.getElementById("FRAM").style.display = "none";
+      } else {
+        document.getElementById("FRAM").style.display = "block";
+      }
     }
   </script>
 
