@@ -32,7 +32,7 @@ console.log("IMUL(MULTIPLICATION) OF 6 3 - >",Math.imul(6,3),"\n\n");
 
 console.log("--------------------------------------------------------------------\n");
 
-console.log("%cMath.sign() WILL CHECK THE NUMBER IS POSITIVE OR NEGETIVE IF NUMBER IS POSITIVE THAN IT WILL RETURN 1 BUT IF NUMBER IS NEGETIVE IT WILL RETURN -1 ALTHOUGH IF YOU PUT 0 IN PARAMETER IT WILL RETURN 0 IF YOU PUT -0 IT FILL RETURN -0.\n\n","color:aqua;");
+console.log("%cMath.sign() WILL CHECK THE NUMBER IS POSITIVE OR NEGETIVE IF NUMBER IS POSITIVE THAN IT WILL RETURN 1 BUT IF NUMBER IS NEGETIVE IT WILL RETURN -1 ALTHOUGH IF YOU PUT 0 IN PARAMETER IT WILL RETURN 0 IF YOU PUT -0 IT FILL RETURN -0.\nIF YOU PUT SOME INVALID STRING MEANS CHARACTERS IT WILL RETURN NaN.\n\n","color:aqua;");
 
 console.log("SIGN CHECKER OF -9 -> ",Math.sign(-9));
 
@@ -46,7 +46,38 @@ console.log("SIGN CHECKER OF 0 -> ",Math.sign(0));
 
 console.log("SIGN CHECKER OF -0 -> ",Math.sign(-0));
 
+console.log("SIGN CHECKER OF 0.9 -> ",Math.sign(0.9));
+
+console.log("SIGN CHECKER OF 0.3 -> ",Math.sign(0.3));
+
+console.log("SIGN CHECKER OF -0.3 -> ",Math.sign(-0.3));
+
+console.log("SIGN CHECKER OF -0.9 -> ",Math.sign(-0.9));
+
 console.log("SIGN CHECKER OF '9'-> ",Math.sign("9"));
+
+console.log("SIGN CHECKER OF 'HIII'-> ",Math.sign("HIII"));
+
+
+console.log("--------------------------------------------------------------------\n");
+
+
+
+console.log("%cMath.abs() WILL RETURN POSITIVE VALUE.\n\n","color:aqua;");
+
+console.log("ABS OF -9 -> ",Math.abs(-9));
+
+console.log("ABS OF -9.12 -> ",Math.abs(-9.12));
+
+console.log("ABS OF -0 -> ",Math.abs(-0));
+
+console.log("ABS OF -0.3 -> ",Math.abs(-0.3));
+
+console.log("ABS OF -0.9 -> ",Math.abs(-0.9));
+
+console.log("ABS OF 9 -> ",Math.abs(9));
+
+
 
 
 console.log("--------------------------------------------------------------------\n");
@@ -61,10 +92,10 @@ console.log("MINIMUM VALUE CHECK OF  -9 , -6 , -3 -> ",Math.min(-3,-6,-9));
 
 console.log("\n");
 
-console.log("MINIMUM VALUE CHECK OF  3 , 6 , 9 -> ",Math.max(9,6,3));
-console.log("MINIMUM VALUE CHECK OF  9 , 6 , 3 -> ",Math.max(3,6,9));
-console.log("MINIMUM VALUE CHECK OF  -3 , -6 , -9 -> ",Math.max(-9,-6,-3));
-console.log("MINIMUM VALUE CHECK OF  -9 , -6 , -3 -> ",Math.max(-3,-6,-9));
+console.log("MAXIMUM VALUE CHECK OF  3 , 6 , 9 -> ",Math.max(9,6,3));
+console.log("MAXIMUM VALUE CHECK OF  9 , 6 , 3 -> ",Math.max(3,6,9));
+console.log("MAXIMUM VALUE CHECK OF  -3 , -6 , -9 -> ",Math.max(-9,-6,-3));
+console.log("MAXIMUM VALUE CHECK OF  -9 , -6 , -3 -> ",Math.max(-3,-6,-9));
 
 
 
@@ -87,6 +118,15 @@ console.log("TRUNC OF -9.12 - >",Math.trunc(-9.12),"\n");
 
 console.log("TRUNC OF -9.99 - >",Math.trunc(-9.99),"\n");
 
+console.log("TRUNC OF 0.9 - >",Math.trunc(0.9),"\n");
+
+console.log("TRUNC OF -0.9 - >",Math.trunc(-0.9),"\n");
+
+console.log("TRUNC OF 0.3 - >",Math.trunc(0.3),"\n");
+
+console.log("TRUNC OF -0.3 - >",Math.trunc(-0.3),"\n");
+
+
 
 console.log("--------------------------------------------------------------------\n");
 
@@ -98,13 +138,24 @@ console.log("FOR EXAMPLE - 9.12 IS INSIDE PARAMTER SO 9 AND 10 NOW WHICH VALUE I
 
 console.log("CEIL OF 9.12 - >",Math.ceil(9.12),"\n");
 
-console.log("CEIL OF 9 - >",Math.ceil(9),"\n");
 
 console.log("CEIL OF 6.3 - >",Math.ceil(6.3),"\n");
 
 console.log("CEIL OF 6.9 - >",Math.ceil(6.9),"\n");
 
 console.log("CEIL OF -9.12 - >",Math.ceil(-9.12),"\n");
+
+console.log("CEIL OF 0.4 - >",Math.ceil(0.4),"\n");
+
+console.log("CEIL OF 0.7 - >",Math.ceil(0.7),"\n");
+
+console.log("CEIL OF -0.4 - >",Math.ceil(-0.4),"\n");
+
+console.log("CEIL OF -0.7 - >",Math.ceil(-0.7),"\n");
+
+console.log("\n%cNOTE-- IF THE VALUE IS INTEGER IT SELF MEANS WITH OUT . POINT THAN IT WILL RETURN SAME VALUE OK.\n","color:lime;");
+console.log("CEIL OF 9 - >",Math.ceil(9),"\n");
+console.log("CEIL OF -9 - >",Math.ceil(-9),"\n");
 
 
 console.log("--------------------------------------------------------------------\n");
@@ -116,31 +167,42 @@ console.log("FOR EXAMPLE - 9.12 IS INSIDE PARAMTER SO 9 AND 10 NOW WHICH VALUE I
 
 console.log("FLOOR OF 9.12 - >",Math.floor(9.12),"\n");
 
-console.log("FLOOR OF 9 - >",Math.floor(9),"\n");
-
 console.log("FLOOR OF 6.3 - >",Math.floor(6.3),"\n");
 
 console.log("FLOOR OF 6.9 - >",Math.floor(6.9),"\n");
 
 console.log("FLOOR OF -9.12 - >",Math.floor(-9.12),"\n");
 
+console.log("FLOOR OF 0.4 - >",Math.floor(0.4),"\n");
+
+console.log("FLOOR OF 0.7 - >",Math.floor(0.7),"\n");
+
+console.log("FLOOR OF -0.4 - >",Math.floor(-0.4),"\n");
+
+console.log("FLOOR OF -0.7 - >",Math.floor(-0.7),"\n");
+
+console.log("\n%cNOTE-- IF THE VALUE IS INTEGER IT SELF MEANS WITH OUT . POINT THAN IT WILL RETURN SAME VALUE OK.\n","color:lime;");
+console.log("FLOOR OF 9 - >",Math.floor(9),"\n");
+console.log("FLOOR OF -9 - >",Math.floor(-9),"\n");
+
+
 
 console.log("--------------------------------------------------------------------\n");
 
 console.log("%cMath.round() SO IN ROUND THE NUMBER WILL BE ROUND OF ON BASE OF FLOATING VALUE IF VALUES FLOATING POINT NUMBER IS 50 OR MORE THAN THAT THAN IT WILL RETURN NEXT NUMBER BUT IF IT IS LESS THAN 50 THAN IT WILL RETURN SAME NUMBER , BUT KEEP IN MIND IF .50 IS IN NEGETIVE VALUE THAN IT WILL NOT RETURN NEXT NUMBER IT WILL RETURN SAME NUMBER OK.\n\n","color:aqua;");
 
-console.log("FOR EXAMPLE - 9.12 IS INSIDE PARAMTER SO 9 AND 10 NOW WHICH VALUE IS LOWEST IN THESE 2");
 
 
 console.log("ROUND OF 9.12 - >",Math.round(9.12),"\n");
 
-console.log("ROUND OF 9 - >",Math.round(9),"\n");
 
 console.log("ROUND OF 6.3 - >",Math.round(6.3),"\n");
 
 console.log("ROUND OF 6.49 - >",Math.round(6.49),"\n");
 
 console.log("ROUND OF 6.50 - >",Math.round(6.50),"  ???\n");
+
+console.log("ROUND OF 6.51 - >",Math.round(6.51),"  ???\n");
 
 console.log("ROUND OF 6.9 - >",Math.round(6.9),"\n");
 
@@ -150,31 +212,19 @@ console.log("ROUND OF -6.49 - >",Math.round(-6.49),"\n");
 
 console.log("ROUND OF -6.50 - >",Math.round(-6.50),"  ???\n");
 
+console.log("ROUND OF -6.51 - >",Math.round(-6.51),"  ???\n");
+
 console.log("ROUND OF -6.9 - >",Math.round(-6.9),"\n");
 
 
 
+
+
+console.log("\n%cNOTE-- IF THE VALUE IS INTEGER IT SELF MEANS WITH OUT . POINT THAN IT WILL RETURN SAME VALUE OK.\n","color:lime;");
+console.log("ROUND OF 9 - >",Math.round(9),"\n");
+
+console.log("ROUND OF -9 - >",Math.round(-9),"\n");
+
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n\n");
 
 console.log("%cEVEN THOUGH THERE ARE MORE MATH METHODS AND PROPETIES BUT THIS IS ENOUGH.","color: red ; font-size: 1.5rem ;");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
