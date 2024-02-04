@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      color-scheme: dark;
+      font-size: 1.5rem;
+    }
+
+    button {
+      background-color: crimson;
+      padding: 0.3rem 2rem;
+      margin-right: 3%;
+    }
+
+    h1 {
+      padding: 2rem;
+    }
+
+    p {
+      margin-top: 6%;
+      color: lime;
+    }
+
+    p>span {
+      color: royalblue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>---CHECK HIGHEST NUMBER---</h1>
+
+  <span>Enter First Number : </span> &nbsp;&nbsp;&nbsp; <input type="number" id="num1" autofocus
+    placeholder="Enter Number"><br><br>
+
+  <span>Enter Second Number : </span> <input type="number" id="num2" placeholder="Enter Number"><br><br>
+
+  <span>Enter Third Number : </span> &nbsp;&nbsp; <input type="number" id="num3" placeholder="Enter Number"><br><br>
+
+  <button type="button" id="check" onclick="CHECK()">CHECK</button>
+  <button type="button" id="clear" onclick="CLEAR()">CLEAR</button>
+
+  <p>RESULT&nbsp;&nbsp; => &nbsp;&nbsp;&nbsp; <span id="result"></span></p>
+
+  <script>
+
+    function CHECK() {
+
+      let a = + document.getElementById("num1").value;
+      let b = + document.getElementById("num2").value;
+      let c = + document.getElementById("num3").value;
+
+
+      if (a > b) {
+        if (a > c) {
+          document.getElementById("result").innerText = a + "  WHICH IS IN " + " FIRST BOX " + " IS HIGHEST NUMBER.";
+        }
+      }
+      if (b > a) {
+        if (b > c) {
+          document.getElementById("result").innerText = b + "  WHICH IS IN " + " SECOND BOX " + " IS HIGHEST NUMBER.";
+        }
+      }
+      if (c > a) {
+        if (c > b) {
+          document.getElementById("result").innerText = c + "  WHICH IS IN " + " THIRD BOX " + " IS HIGHEST NUMBER.";
+        }
+      }
+
+
+
+
+
+      // if (a > b) {
+      //   if (a > c) {
+      //     window.alert(a + "  WHICH IS IN " + " FIRST BOX " + " IS HIGHEST NUMBER.");  
+      //   } 
+      //   else {
+      //     window.alert(c + "  WHICH IS IN " + " THIRD BOX " + " IS HIGHEST NUMBER.");   
+      //   }
+
+      // } 
+
+      // else {
+      //   if(b > c){
+      //     window.alert(b + "  WHICH IS IN " + " SECOND BOX " + " IS HIGHEST NUMBER.");
+      //   }
+      //   else{
+      //     window.alert(c + "  WHICH IS IN " + " THIRD BOX " + " IS HIGHEST NUMBER.");      
+      //   }
+      // }
+
+
+    }
+
+
+
+    function CLEAR() {
+      document.getElementById("num1").value = "";
+      document.getElementById("num2").value = "";
+      document.getElementById("num3").value = "";
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>
