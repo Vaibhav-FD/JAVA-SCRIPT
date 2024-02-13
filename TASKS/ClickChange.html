@@ -18,28 +18,26 @@
 </head>
 <body>
 
-  <img src="https://media.tenor.com/nMwwD7FTuHUAAAAj/clash-royale-prince.gif" alt="" id="image">
+  <img src="" alt="" id="image">
   <button type="button" onclick="CLICK()">CLICK CHANGE</button>
-
 
   <script>
 
     function CLICK(){
       
-      let a = document.getElementById("image").src;
+      let image = document.getElementById("image");
 
-      if (a == "https://media.tenor.com/nMwwD7FTuHUAAAAj/clash-royale-prince.gif") 
+      if (image.src == "https://media.tenor.com/nMwwD7FTuHUAAAAj/clash-royale-prince.gif") 
       {
-        document.getElementById("image").src = "https://media.tenor.com/Re6NVozFoJgAAAAi/goblin-clash-royale.gif"; 
+        image.src = "https://media.tenor.com/Re6NVozFoJgAAAAi/goblin-clash-royale.gif"; 
       } 
 
       else 
       {
-        document.getElementById("image").src = "https://media.tenor.com/nMwwD7FTuHUAAAAj/clash-royale-prince.gif";
+        image.src = "https://media.tenor.com/nMwwD7FTuHUAAAAj/clash-royale-prince.gif";
       }      
           
     }
-
 
   </script>
   

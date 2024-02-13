@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClickChange_3Times</title>
+  <style>
+    *{
+      color-scheme: dark;
+    }
+
+    button{
+      border: 3px ridge aqua;
+      border-radius: 1rem;
+      font-size: 1.5rem;
+      padding: 1rem 2.7rem;
+    }
+
+    p{
+      width: fit-content;
+      font-size: 3.9rem;
+      color: transparent;
+      background-image: linear-gradient(45deg,red,lime,hotpink,navy);
+      background-clip: text;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="text">---START---</p>
+  <button type="button" id="btn" onclick="CLICK()">Click Change</button>
+
+  <script>
+
+    let value = 1;
+
+    function CLICK(){
+
+      let a = document.getElementById("text");
+
+      
+      if (value == 4 ) {
+        value = 1;
+      }
+      
+      if (value == 1) {
+        a.innerText = "HTML";
+      }
+
+      if (value == 2) {
+        a.innerText = "CSS";
+      }
+      
+      if (value == 3) {
+        a.innerText = "JS";
+      }
+      
+      value++;
+    }
+
+  </script>
+</body>
+</html>
