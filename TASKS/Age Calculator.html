@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color-scheme: dark;
+      font-size: 1.2rem;
+    }
+   
+    button{
+      padding: 0.81rem 1.2rem;
+    }
+    input{
+      display: block;
+      margin-bottom: 2rem;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <span>CURRNET DATE</span>
+  <input type="date" name="currentdate" id="currentdate" value="2024-02-24"> 
+  
+  <span>DOB</span>
+  <input type="date" name="dob" id="dob">  
+
+
+  <button type="button" onclick="checkAge()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+
+    function checkAge(){
+
+      let dob = document.getElementById("dob").value;
+
+      let currentDate = document.getElementById("currentdate").value;
+
+      let result = document.getElementById("result");
+
+
+
+
+      let year = currentDate.slice(0,4) - dob.slice(0,4);
+      let month = year * 12;
+      let days = year * 365;
+
+
+
+      result.innerHTML = " Your Years " + year + "<br> " + " Your Months " + month + "<br>" +" Your Days " + days;
+
+    }
+
+
+  </script>
+  
+</body>
+</html>
