@@ -1,66 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Age Calculator</title>
   <style>
-    *{
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      color-scheme: dark;
-      font-size: 1.2rem;
+      font-size: 1.29rem;
+      font-family: Arial, Helvetica, sans-serif;
     }
-   
-    button{
-      padding: 0.81rem 1.2rem;
+
+    body {
+      background-image: linear-gradient(108deg, #434343 0%, #272727, black 108%);
+      color: white;
     }
-    input{
+
+    h1 {
+      margin-inline: auto;
+      margin-block: 0.9rem;
+      font-size: 2.1rem;
+      text-align: center;
+      background-image: linear-gradient(180deg, #c6ffdd, #f7797d, #fbd786);
+      background-clip: text;
+      -webkit-text-stroke: 5px transparent;
+      color: black;
+      letter-spacing: 0.27rem;
+      word-spacing: 0.81rem;
+    }
+
+    .box {
+      width: 54%;
+      margin-inline: auto;
+      border: 4px solid transparent;
+      background: linear-gradient(210deg, #434343 0%, #272727, black 108%) padding-box, linear-gradient(210deg, lime, blueviolet, aqua) border-box;
+      border-radius: 0.69rem;
+      padding: 1.8rem;
+      text-align: center;
+    }
+
+    button {
       display: block;
-      margin-bottom: 2rem;
+      margin-inline: auto;
+      margin-block: 2.1rem;
+      padding: 0.39rem 2.7rem;
+      border: none;
+      border-radius: 6px;
+      background-color: black;
+      color: white;
+      border: 2px solid deeppink;
+      transition: color 390ms linear, background-color 390ms linear, transform 390ms linear, border 390ms linear;
     }
-    
+
+    button:hover {
+      background-color: #ab9b9b;
+      color: black;
+      transform: translateY(-6%);
+      border: 2px solid red;
+    }
+
+    input {
+      padding: 0.21rem 1.5rem;
+      border: 5px solid #b8b801;
+      font-weight: 600;
+    }
+
+
+    #yourage {
+      text-align: left;
+    }
+
+    #yourage>span {
+      color: limegreen;
+      font-size: 0.81rem;
+    }
+    #yourage>b{
+      font-size: 0.81rem;
+      color: red;
+
+    }
   </style>
 </head>
+
 <body>
 
-  <span>CURRNET DATE</span>
-  <input type="date" name="currentdate" id="currentdate" value="2024-02-24"> 
-  
-  <span>DOB</span>
-  <input type="date" name="dob" id="dob">  
 
 
-  <button type="button" onclick="checkAge()">Check</button>
+  <h1>AGE CALCULATOR</h1>
 
-  <p id="result"></p>
+  <div class="box">
+
+    <span>Enter Your Date Of Birth : </span><input type="date" name="dob" id="dob" value="2001-12-09">
+    <button type="button" onclick="calculate()">Calculate</button>
+
+    <p id="yourage"></p>
+
+  </div>
+
+
 
   <script>
+   
 
-    function checkAge(){
+    function calculate() {
 
-      let dob = document.getElementById("dob").value;
 
-      let currentDate = document.getElementById("currentdate").value;
-
-      let result = document.getElementById("result");
-
+      let liveDate = new Date();
+      let dobDate = new Date(document.getElementById("dob").value);
 
 
 
-      let year = currentDate.slice(0,4) - dob.slice(0,4);
-      let month = year * 12;
-      let days = year * 365;
+      let currentMiliseconds = liveDate.getTime();
+
+      let dobMiliseconds = dobDate.getTime();
+
+      let ageMiliseconds = currentMiliseconds - dobMiliseconds;
 
 
 
-      result.innerHTML = " Your Years " + year + "<br> " + " Your Months " + month + "<br>" +" Your Days " + days;
+      let ageYears = ageMiliseconds / 31556952000;
+
+      let ageMonths = ageMiliseconds / 2629746000;
+
+      let ageDays = ageMiliseconds / 86400000;
+
+      let ageHours = ageMiliseconds / 3600000 + 5.5;
+
+      let ageMinutes = ageMiliseconds / 60000 + 330;
+
+      let ageSeconds = ageMiliseconds / 1000 + 19800;
+
+
+
+      // --- THIS ALSO WORKS BUT IT IS NOT 100% ACURATE ---
+
+      // let ageMonths = ageYears * 12;                   
+      // let ageDays = ageMonths * 30.416666666666;
+        
+        document.getElementById("yourage").innerHTML =
+        `${Math.trunc(ageYears)} &nbsp; <span> YEARS </span>  &nbsp; <b> OR </b> <br><br>
+         ${Math.trunc(ageMonths)} &nbsp; <span> MONTHS </span>  &nbsp; <b> OR </b> <br><br>
+         ${Math.trunc(ageDays)} &nbsp; <span> DAYS </span>  &nbsp; <b> OR </b> <br><br>
+         ${Math.trunc(ageHours)} &nbsp; <span> HOURS </span> &nbsp; <b> OR </b> <br><br>
+         ${Math.trunc(ageMinutes)} &nbsp; <span> MINUTES </span> &nbsp; <b> OR </b> <br><br>
+         ${Math.trunc(ageSeconds)} &nbsp; <span> SECONDS </span>`;
+ 
+
+
+
+
+      // BELOW IS NOT A PART OF MAIN CODE
+      // ACCURATE CALCULATION WITH FLOATING POINT NUMBERS 
+
+      console.log("\n\n%c++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n", "color:lime;");
+
+      console.log("LIVE TIME IN MILISECONDS --------- ", currentMiliseconds);
+      console.log("DATE OF BIRTH TIME IN MILISECONDS --------- ", dobMiliseconds);
+      console.log("LIVE AGE IN MILISECONDS --------- ", ageMiliseconds);
+
+      console.log("LIVE AGE IN YEARS --------- ", ageYears);
+      console.log("LIVE AGE IN MONTHS --------- ", ageMonths);
+      console.log("LIVE AGE IN DAYS --------- ", ageDays);
+      console.log("LIVE AGE IN HOURS --------- ", ageHours);
+      console.log("LIVE AGE IN MINUTES --------- ", ageMinutes);
+      console.log("LIVE AGE IN SECONDS --------- ", ageSeconds);
+
+
 
     }
+    // setInterval(calculate,1000);
 
 
   </script>
-  
 </body>
+
 </html>
