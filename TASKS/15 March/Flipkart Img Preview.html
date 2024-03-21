@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Img Flipkart Preview</title>
+  <style>
+
+    *{
+      color-scheme: dark;
+      /* outline: 3px solid green; */
+    }
+
+    .sideimgs,.mainimg{
+      padding: 1rem;
+    }
+
+    .sideimgs img{
+      font-size: 0;
+      width: 63px;
+      height: 63px;
+      margin-right: 2.1rem;
+      border: 3px solid blueviolet;
+    }
+
+    .mainimg{
+      overflow: hidden;
+    }
+
+    .mainimg img{
+     height: 570px;
+      width: 690px;
+      border: 3px solid grey;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  
+    <div class="sideimgs">
+
+      <img src="MULTIMEDIA/img1.jpeg" alt="img" >
+      <img src="MULTIMEDIA/img2.jpeg" alt="img" >
+      <img src="MULTIMEDIA/img3.jpeg" alt="img" >
+      <img src="MULTIMEDIA/img4.jpeg" alt="img" >
+      <img src="MULTIMEDIA/img5.jpeg" alt="img" >
+      <img src="MULTIMEDIA/img6.jpeg" alt="img" >
+      
+    </div>
+
+    <div class="mainimg">
+
+      <img src="" alt="mainimg">
+
+    </div>
+
+
+    <script>
+
+      let sideimg = document.querySelectorAll(`.sideimgs img`);
+
+      let mainimg = document.querySelector(`.mainimg img`);
+
+
+
+      for (const iterator of sideimg) {
+
+        let changingImg = iterator.getAttribute(`src`);
+
+        iterator.addEventListener("click",function(){
+
+          mainimg.setAttribute(`src`,changingImg)
+
+        })
+        
+      }
+
+    </script>
+
+</body>
+</html>
