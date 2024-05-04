@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Dynamically</title>
+  <style>
+    * {
+      color-scheme: dark;
+      font-size: 1.29rem;
+    }
+
+    div~div{
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <input type="text" name="textbox" id="textbox">
+
+    <button type="button" id="btn" onclick="colorDiv()">Click</button>
+  </div>
+
+  <script>
+
+
+    let btn = document.getElementById(`btn`);
+
+    let colorName = document.getElementById(`textbox`);
+
+    function colorDiv() {
+
+
+      let div = document.createElement(`div`);
+
+      div.style.height = `108px`;
+      div.style.width = `108px`;
+      div.style.margin = `1.29rem`;
+
+      div.style.backgroundColor = colorName.value;
+
+      div.style.boxShadow = `0px 0px 21px 3px ${colorName.value}`;
+
+      div.style.borderRadius = `9px`;
+
+      document.body.append(div);
+
+      colorName.value = ``;
+
+    }
+
+
+
+
+  </script>
+
+</body>
+
+</html>

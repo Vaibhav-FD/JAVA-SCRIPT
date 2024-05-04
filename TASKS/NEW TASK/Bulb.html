@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulb On Off</title>
+  <style>
+    button {
+      font-size: 1.29rem;
+      padding: 0.39rem 1.29rem;
+    }
+    body{
+      background-color: #9c9c9c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="MULTIMEDIA/bulboff.png" alt="bulb" id="bulb">
+
+
+  <button type="button" id="btn">ON</button>
+
+
+  <script>
+
+    let bulb = document.getElementById(`bulb`);
+
+    let btn = document.getElementById(`btn`);
+
+
+    btn.addEventListener("click", function () {
+
+
+      if (btn.innerText === "ON") {
+
+        btn.innerText = "OFF";
+        bulb.src = `MULTIMEDIA/bulbon.png`;
+        
+      } else {
+        
+        btn.innerText = "ON";
+        bulb.src = `MULTIMEDIA/bulboff.png`;
+
+      }
+
+
+
+    })
+
+
+
+
+  </script>
+
+</body>
+
+</html>
