@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Collapase</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color-scheme: dark;
+    }
+
+    body {
+      font: 400 1.5rem arial;
+      text-transform: capitalize;
+      word-spacing: 0.21rem;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 1.9rem;
+      margin-block: 1.9rem;
+    }
+
+    .faqbox {
+      width: 69%;
+      margin-inline: auto;
+      box-shadow: 0px 0px 12px 3px grey;
+      margin-block: 2.7rem;
+    }
+    
+    .faqbox>b
+    {
+      padding: 1.09rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+    
+    .faqbox>b>span{
+      font-size: 1.8rem;
+      transition: transform 390ms linear,color 390ms linear;
+    }
+
+    .faqbox>p {
+      background-color: #212121;
+      overflow: hidden; 
+      max-height: 0;
+      transition: max-height 609ms linear,margin-top 609ms linear;
+    }
+
+    .faqbox>p>span {
+      height: 100%;
+      padding: 1.09rem;
+      display: block;
+      border: 1px solid transparent;
+      border-image: linear-gradient(108deg, crimson, cyan, lime) 9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="heading">
+    <h1>FAQ</h1>
+  </div>
+
+
+  <div class="faq">
+
+    <div class="faqbox">
+
+      <b>what is HTML ?<span>✛</span></b>
+      <p><span>HTML stands for hyper text markup language , HTML was developed by tim-Berners-Lee in 1991.</span></p>
+
+    </div>
+
+    <div class="faqbox">
+
+      <b>what is CSS ?<span>✛</span></b>
+      <p><span>CSS stands for cascading style sheet , CSS was developed by hakon wium lee in 1994.</span></p>
+
+    </div>
+
+    <div class="faqbox">
+
+      <b>what is JS ?<span>✛</span></b>
+      <p><span>JS Stans For javaScript , JS was developed by bredan eich in 1995.</span></p>
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+    let faqQue = document.querySelectorAll(`.faqbox b`);
+
+
+    for (const iterator of faqQue) {
+
+      iterator.addEventListener(`click`, function () {
+
+
+        let nextSibStyle = iterator.nextElementSibling.style;
+
+        let contentHeight = `${iterator.nextElementSibling.scrollHeight}px`;
+
+
+        if (nextSibStyle.maxHeight == contentHeight) {
+
+          nextSibStyle.maxHeight = `0px`;
+          nextSibStyle.marginTop = `0rem`;
+          iterator.querySelector(`span`).style.color = `white`;
+          iterator.querySelector(`span`).style.transform = `rotate(0deg)`;
+
+          
+        } else {
+          
+          nextSibStyle.maxHeight = contentHeight;
+          nextSibStyle.marginTop = `1rem`;
+          iterator.querySelector(`span`).style.color = `yellow`;
+          iterator.querySelector(`span`).style.transform = `rotate(45deg)`;
+
+
+        }
+
+      })
+
+    }
+
+
+  </script>
+</body>
+
+</html>
